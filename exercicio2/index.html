@@ -4,68 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 2 - Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f4f4f4;">
+<body>
 
-    <h1 style="text-align: center;">Cadastro de Personagem</h1>
-
-    <form action="/cadastrar-personagem" method="get">
-        
-        <table border="0" width="60%" align="center" cellpadding="10" bgcolor="#ffffff" style="border-radius: 8px;">
+    <div class="form-container">
+        <h1>Cadastro de Personagem</h1>
+        <form action="/cadastrar-personagem" method="get">
             
-            <tr>
-                <td width="30%"><label for="nome">Nome do Personagem:</label></td>
-                <td><input type="text" id="nome" name="nome_personagem" size="30" maxlength="50"></td>
-            </tr>
-            <tr>
-                <td><label for="apelido">Apelido:</label></td>
-                <td><input type="text" id="apelido" name="apelido_personagem" size="20" maxlength="20"></td>
-            </tr>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="nome">Nome do Personagem:</label>
+                    <input type="text" id="nome" name="nome_personagem" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="apelido">Apelido:</label>
+                    <input type="text" id="apelido" name="apelido_personagem" maxlength="20">
+                </div>
 
-            <tr>
-                <td><label>Classe:</label></td>
-                <td>
-                    <input type="radio" id="guerreiro" name="classe" value="guerreiro">
-                    <label for="guerreiro">Guerreiro</label><br>
-                    <input type="radio" id="mago" name="classe" value="mago">
-                    <label for="mago">Mago</label><br>
-                    <input type="radio" id="arqueiro" name="classe" value="arqueiro">
-                    <label for="arqueiro">Arqueiro</label>
-                </td>
-            </tr>
+                <div class="form-group full-width">
+                    <label>Classe:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="guerreiro" name="classe" value="guerreiro">
+                        <label for="guerreiro">Guerreiro</label>
+                        <input type="radio" id="mago" name="classe" value="mago">
+                        <label for="mago">Mago</label>
+                        <input type="radio" id="arqueiro" name="classe" value="arqueiro">
+                        <label for="arqueiro">Arqueiro</label>
+                    </div>
+                </div>
 
-            <tr>
-                <td><label>Habilidades Iniciais:</label></td>
-                <td>
-                    <input type="checkbox" id="forca" name="habilidades" value="forca">
-                    <label for="forca">Força</label><br>
-                    <input type="checkbox" id="agilidade" name="habilidades" value="agilidade">
-                    <label for="agilidade">Agilidade</label><br>
-                    <input type="checkbox" id="inteligencia" name="habilidades" value="inteligencia">
-                    <label for="inteligencia">Inteligência</label>
-                </td>
-            </tr>
+                <div class="form-group full-width">
+                    <label>Habilidades Iniciais:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="forca" name="habilidades" value="forca">
+                        <label for="forca">Força</label>
+                        <input type="checkbox" id="agilidade" name="habilidades" value="agilidade">
+                        <label for="agilidade">Agilidade</label>
+                        <input type="checkbox" id="inteligencia" name="habilidades" value="inteligencia">
+                        <label for="inteligencia">Inteligência</label>
+                    </div>
+                </div>
 
-            <tr>
-                <td><label for="nascimento">Data de Criação:</label></td>
-                <td><input type="date" id="nascimento" name="data_criacao"></td>
-            </tr>
+                <div class="form-group">
+                    <label for="nascimento">Data de Criação:</label>
+                    <input type="date" id="nascimento" name="data_criacao">
+                </div>
 
-            <tr>
-                <td><label for="poder">Nível de Poder (0-100):</label></td>
-                <td>
-                    0 <input type="range" id="poder" name="nivel_poder" min="0" max="100" value="50"> 100
-                </td>
-            </tr>
+                <div class="form-group">
+                    <label for="poder">Nível de Poder (0-100):</label>
+                    <input type="range" id="poder" name="nivel_poder" min="0" max="100" value="50">
+                </div>
 
-            <tr>
-                <td><label for="historia">História do Personagem:</label></td>
-                <td><textarea id="historia" name="historia_personagem" rows="5" cols="40"></textarea></td>
-            </tr>
+                <div class="form-group full-width">
+                    <label for="historia">História do Personagem:</label>
+                    <textarea id="historia" name="historia_personagem" rows="5"></textarea>
+                </div>
 
-            <tr>
-                <td><label for="reino">Reino de Origem:</label></td>
-                <td>
+                <div class="form-group full-width">
+                    <label for="reino">Reino de Origem:</label>
                     <select id="reino" name="reino_origem">
                         <option value="">Selecione um reino</option>
                         <option value="norte">Reino Heart</option>
@@ -73,17 +70,15 @@
                         <option value="leste">Reino Clover</option>
                         <option value="oeste">Reino Diamond</option>
                     </select>
-                </td>
-            </tr>
+                </div>
 
-            <tr>
-                <td colspan="2" style="text-align: center;">
+                <div class="form-buttons full-width">
                     <button type="reset">Limpar Formulário</button>
                     <button type="submit">Cadastrar Personagem</button>
-                </td>
-            </tr>
-        </table>
-    </form>
+                </div>
+            </div>
+        </form>
+    </div>
 
 </body>
 </html>

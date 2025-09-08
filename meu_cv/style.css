@@ -1,0 +1,173 @@
+/* --- PALETA DE CORES COM VARIÁVEIS CSS --- */
+:root {
+    --cor-fundo: #f8f9fa;      /* Branco gelo */
+    --cor-texto: #343a40;      /* Cinza escuro */
+    --cor-primaria: #005f73;    /* Azul petróleo escuro */
+    --cor-destaque: #0a9396;    /* Ciano */
+    --cor-branco: #ffffff;
+    --cor-cinza-claro: #f1f1f1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%; 
+}
+
+.header {
+    background: linear-gradient(to right, #212529, #000000); 
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    background: var(--cor-branco);
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+.sidebar {
+    width: 30%;
+    padding: 20px;
+    background: linear-gradient(to bottom, var(--cor-branco), var(--cor-cinza-claro));
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+    border: 4px solid var(--cor-branco);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
+}
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.video-container {
+    text-align: center;
+}
+
+.main-content {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section h2 {
+    color: var(--cor-primaria); /* Nova cor para títulos */
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: 5px;
+}
+
+.skills-hobbies {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hobbies, .soft-skills {
+    width: 48%;
+}
+
+.hobbies li, .soft-skills li {
+    transition: color 0.3s ease;
+}
+.hobbies li:hover, .soft-skills li:hover {
+    color: var(--cor-destaque); /* Nova cor de hover */
+}
+
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    display: block;
+}
+
+.history-table th, .history-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.history-table th {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+.history-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+.history-table tbody tr:hover {
+    background-color: #e9ecef; /* Tom de cinza mais claro */
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #000000, #212529);
+    color: var(--cor-branco);
+}
+
+.footer a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+.footer a:hover {
+    color: var(--cor-branco);
+    text-decoration: underline;
+}
+
+/* --- REGRAS DE RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        flex-direction: column;
+    }
+    .sidebar, .main-content {
+        width: 100%;
+    }
+    .skills-hobbies {
+        flex-direction: column;
+    }
+    .hobbies, .soft-skills {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; 
+    }
+    .header h1 {
+        font-size: 1.5rem; 
+    }
+    .container {
+        width: 100%;
+        margin: 10px 0;
+        box-shadow: none;
+    }
+    .sidebar, .main-content {
+        padding: 15px; 
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}

@@ -3,59 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Currículo - HTML Básico</title>
+    <title>Meu Currículo - CSS Avançado</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f4f4f4;">
+<body>
 
-    <table border="0" width="80%" align="center" cellpadding="20" bgcolor="#ffffff">
-        <tr>
-            <td colspan="2" style="text-align: center;">
-                <h1>Meu Currículo</h1>
-            </td>
-        </tr>
+    <header class="header">
+        <h1>Meu Currículo</h1>
+    </header>
 
-        <tr>
-            <td width="40%" valign="top">
-                <h2>Sobre Mim</h2>
-
-                <h3>Minha Foto</h3>
-                <p>
-                    <img src="imagens/minha_foto.jpg" alt="Sua Foto" width="200" style="border-radius: 50%;">
-                </p>
-
+    <div class="container">
+        <aside class="sidebar">
+            <img src="imagens/minha_foto.jpg" alt="Sua Foto" class="profile-pic">
+            <div class="video-container">
                 <h3>Vídeo de Apresentação</h3>
-                <video width="100%" height="200" controls>
+                <video width="100%" controls>
                     <source src="videos/meu_video.mp4" type="video/mp4">
                     Seu navegador não suporta a tag de vídeo.
                 </video>
-            </td>
+            </div>
+        </aside>
 
-            <td width="60%" valign="top">
+        <main class="main-content">
+            <section class="section">
                 <h2>Habilidades e Interesses</h2>
-
-                <h3>Meus Hobbies</h3>
-                <ol>
-                    <li>Jogar Video Game</li>
-                    <li>Fazer música</li>
-                    <li>Conversar com amigos</li>
-                </ol>
-
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li>Criatividade</li>
-                    <li>Comprometimento</li>
-                    <li>Dinamismo</li>
-                    <li>Inovador</li>
-                </ul>
-            </td>
-        </tr>
-        
-        <tr>
-            <td colspan="2">
+                <div class="skills-hobbies">
+                    <div class="hobbies">
+                        <h3>Meus Hobbies</h3>
+                        <ol>
+                            <li>Jogar Video Game</li>
+                            <li>Fazer música</li>
+                            <li>Conversar com amigos</li>
+                        </ol>
+                    </div>
+                    <div class="soft-skills">
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Criatividade</li>
+                            <li>Comprometimento</li>
+                            <li>Dinamismo</li>
+                            <li>Inovador</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
                 <h2>Histórico Profissional</h2>
-                <table border="1" width="100%" cellpadding="10" cellspacing="0" style="border-collapse: collapse;">
+                <table class="history-table">
                     <thead>
-                        <tr bgcolor="#f0f0f0">
+                        <tr>
                             <th>Data Início</th>
                             <th>Data Fim</th>
                             <th>Empresa</th>
@@ -77,21 +74,18 @@
                         </tr>
                     </tbody>
                 </table>
-            </td>
-        </tr>
+            </section>
+        </main>
+    </div>
 
-        <tr>
-            <td colspan="2" style="text-align: center;">
-                <h2>Links Preferidos</h2>
-                <p>
-                    <a href="https://www.netflix.com/br/" target="_blank">Netflix</a> | 
-                    <a href="https://www.youtube.com/" target="_blank">Youtube</a> | 
-                    <a href="https://www.riotgames.com/pt-br" target="_blank">Riot Games</a>
-                </p>
-            </td>
-        </tr>
-
-    </table>
+    <footer class="footer">
+        <h2>Links Preferidos</h2>
+        <p>
+            <a href="https://www.netflix.com/br/" target="_blank">Netflix</a> | 
+            <a href="https://www.youtube.com/" target="_blank">Youtube</a> | 
+            <a href="https://www.riotgames.com/pt-br" target="_blank">Riot Games</a>
+        </p>
+    </footer>
 
 </body>
 </html>
